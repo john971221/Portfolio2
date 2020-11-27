@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: hidden;
+}
+
+.Rox {
+    font-family: "Roxborough CF"
+}
+
+.Nanum {
+    font-family: "NanumMyeongjo"
+}
+
+.Sans {
+    font-family: "Noto Serif KR"
+}
+
+/*배경*/
+/*
+#background {
+    z-index: -1
+}
+
+#background:after {
+    content: '';
+    background-image: url(../img/paper3.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+ startOffset   height: 100vh;
+    opacity: 0.6;
+    z-index: -1;
+}
+*/
+svg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 200;
+    font-size: 100px;
+    letter-spacing: 15px;
+    line-height: 50px;
+    white-space: pre-line;
+    background: #fff;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    transition:.6s
+}
+
+
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*헤더 사이드*/
+header {
+    height: 100vh;
+    width: 3%;
+    display: inline-block;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+#nav {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform: translateX(-50%);
+    transform-origin: center;
+    transition: .2s;
+    opacity: 40%;
+}
+
+header:hover #nav {
+    transform: translateX(-20%);
+    opacity: 100%;
+}
+
+
+#nav img {
+    width: 100%;
+    transform: translateY(-50%);
+    transition: 1.5s;
+    transform-origin: top
+}
+
+#nav ul {
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    transition: 1s;
+    opacity: 0;
+}
+
+header:hover #nav ul {
+    opacity: 100%;
+}
+
+#nav ul li {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+}
+
+#nav ul li img {
+    opacity: 60%;
+    transition: .6s;
+}
+
+#nav ul li:hover img {
+    transition: .4s;
+    transform-origin: bottom;
+    transform: scale(1.2) translateY(-28%);
+    opacity: 100%;
+}
+
+#nav ul li:nth-of-type(1) {
+    transform: translateY(-100%)
+}
+
+#nav ul li:nth-of-type(3) {
+    transform: translateY(100%)
+}
+
+#nav ul li img {}
+
+
+
+
+
+main section {
+    display: inline-block;
+    z-index: 1;
+    left: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/*메인페이지*/
+#main {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+}
+
+
+
+
+
+#main .main_banner {
+    color: #faa130;
+    margin: 0 auto;
+    width: 30%;
+    height: 68%;
+    margin-top: 8%;
+    background: #569aa7;
+}
+
+
+#main .main_banner img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*메인페이지 텍스트*/
+#main .h2_box {
+    position: absolute;
+    line-height: 0;
+    letter-spacing: 50px;
+    z-index: 10;
+    transition: 1s;
+    display: flex;
+}
+
+#main .h2_box h2 {
+    font-weight: normal;
+    font-size: 200pt;
+    transition: 1s;
+    display: none;
+}
+
+
+
+
+#main .h2_box:nth-of-type(1) {
+    left: 20%;
+}
+
+#main .h2_box:nth-of-type(1) h2 {
+    transform: translateY(-400px);
+}
+
+#main .h2_box:nth-of-type(2) {
+    right: 20%;
+}
+
+#main .h2_box:nth-of-type(2) h2 {
+    transform: translateY(400px);
+}
+
+#main h2 span {
+    font-style: italic;
+}
+
+#main p {
+    position: absolute;
+    white-space: pre-line;
+    font-weight: bolder;
+    line-height: 200%;
+    font-size: 20pt;
+    transition: 1s;
+    transform: translateY(-150px);
+}
+
+#main p:nth-of-type(1) {
+    right: 5%;
+}
+
+#main p:nth-of-type(2) {
+    left: 5%;
+    font-weight: normal;
+}
+
+
+/*About페이지*/
+
+#about {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    text-align: center;
+    overflow: scroll !important;
+    z-index: 2;
+    position: relative;
+}
+
+
+#about::-webkit-scrollbar {
+    display: none;
+}
+
+.about_banner {
+    display: inherit;
+    width: 40%;
+    padding: 13% 0;
+}
+
+.about_banner h2 {
+    font-size: 10em;
+    float: left;
+    text-align: right;
+    color: #faa130;
+    letter-spacing: 15px;
+    font-weight: normal;
+    width: 78%;
+}
+
+.about_banner p {
+    float: left;
+    white-space: pre-line;
+    text-align: right;
+    font-size: 26pt;
+    line-height: 150%;
+    width: 75%;
+    padding: 2% 0 7% 0;
+}
+
+.about_banner p span {
+    color: #faa130;
+}
+
+.mini_info {
+    display: inline-block;
+    white-space: pre-line;
+    letter-spacing: 1px;
+    text-align: right;
+    font-weight: 500;
+    width: 72%;
+}
+
+.about_banner img {
+    float: right;
+    transform: rotate(11deg);
+    width: 22%;
+}
+
+.left {
+    float: left;
+    text-align: left
+}
+
+.right {
+    float: right;
+    text-align: right
+}
+
+.about_text {
+    margin: 0 auto;
+    display: table;
+    width: 80%;
+    white-space: pre-line;
+    padding-bottom: 5%;
+}
+
+.about_text:nth-of-type(3) {
+    padding-bottom: 13%;
+}
+
+.education {
+    display: table;
+    width: 55%;
+    float: left;
+    margin-bottom: 10%;
+}
+
+.like {
+    display: table;
+    width: 20%;
+    float: right;
+    margin-left: 9%;
+    margin-bottom: 10%;
+}
+
+.skills {
+    display: table;
+    width: 35%;
+    float: left;
+}
+
+.skills td {
+    text-align: left;
+    font-size: 16pt;
+    line-height: 170%;
+    font-weight: lighter;
+}
+
+.skill_icon {
+    display: table;
+    width: 60%;
+    padding-top: 10%;
+}
+
+.skill_icon img {
+    width: 50px;
+    padding-right: 80%;
+}
+
+#myChart {
+    display: none;
+    width: 30% !important;
+    height: 50% !important;
+    left: 40%;
+    position: absolute;
+    font-size: 30px !important;
+}
+
+.charact {
+    display: table;
+    width: 20%;
+    float: right;
+    margin-left: 9%;
+}
+
+.charact th {
+    padding-bottom: 10px;
+}
+
+.charact td {
+    line-height: 170%;
+    text-align: left;
+}
+
+table th {
+    font-size: 24pt;
+    font-weight: normal;
+    text-align: left;
+}
+
+table tr {
+    font-size: 16pt;
+    line-height: 300%;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+/*work*/
+#work {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    position: relative;
+}
+
+#work > div {
+    width: 100%;
+    height: 100vh;
+    transition: .6s;
+    position: absolute;
+}
+
+.work_1 {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.face_font {
+    color: #faa130;
+    font-size: 400px;
+    padding: 12% 0 0 0%;
+    z-index: 1;
+    transition: .6s
+}
